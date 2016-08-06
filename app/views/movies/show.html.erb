@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-sm-6 col-md-4">
+					<%= image_tag(@movie.image_url, onerror: 'imgerror(this)', height: '500') %>
+					<table class="table">
+						<tr>
+							<br><br>
+							<td>Rating</td>
+							<% @array = Array.new(10) { |i| Array.new(2, (i+1)) } %>
+							<td><%= select_tag(:rating, options_for_select(@array, @movie.rating)) %></td>
+						</tr>
+						<tr>
+							<td>Director</td>
+							<td><%= @movie.director %></td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-sm-5 col-sm-offset-0 col-md-7">
+					<h1><%= @movie.title %> <% if current_user == @movie.user %><%= link_to "edit", edit_movie_path(@movie), class: 'btn btn-primary btn-xs' %> <%= link_to "delete", movie_path(@movie), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger btn-xs' %><% end %></h1>
+					<p><%= @movie.description %></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

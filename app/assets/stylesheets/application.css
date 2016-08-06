@@ -11,6 +11,52 @@
  * file per style scope.
  *
  *= require bsm.min
+ *= require fa.min
+ *= require ch.min
+ *= require bar.min
  *= require_tree .
  *= require_self
  */
+::-webkit-input-placeholder {
+	color: #f27d7d!important;
+}
+:-moz-placeholder {
+	color: #f27d7d!important;
+}
+::-moz-placeholder {
+	color: #f27d7d!important;
+}
+:-ms-input-placeholder {  
+	color: #f27d7d!important;  
+}
+::selection {}
+::-moz-selection {}
+html {
+	height: 100%;
+}
+h1, h2, h3, h4, h5 {
+	margin-top: 0;
+	color: #f27d7d;
+}
+.navbar.navbar-default {
+	background: #824f67;
+	border: 0;
+	border-radius: 0;
+}
+.alert {
+	border-radius: 0;
+	border: 0;
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	font-weight: bold;
+	width: 100%;
+	margin-bottom: 0;
+}
+.alert-notice, .alert-alert {
+	color: #fff;
+}
+.close {
+	color: #000!important;
+	opacity: 0.5!important;
+}

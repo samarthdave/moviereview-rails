@@ -12,6 +12,36 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bar.min
 //= require bsj.min
 //= require turbolinks
 //= require_tree .
+var has_loaded = false;
+var ready = function() {
+	setTimeout(function(){
+		$(".alert").fadeOut();
+	}, 3000);
+}
+
+function turbolinksLoad() {
+	$('#rating').barrating({
+		theme: 'fontawesome-stars',
+		hoverState: false
+	});
+	$('#movie_rating').barrating({
+		theme: 'fontawesome-stars'
+	});
+}
+
+if(!has_loaded) {
+	$(document).ready(ready);
+}
+
+$(document).bind('turbolinks:visit', ready);
+$(document).bind('turbolinks:load', turbolinksLoad);
+
+function imgerror(image) {
+	image.onerror = "";
+	image.src = "http://placehold.it/334x500";
+	return true;
+}

@@ -1,3 +1,104 @@
-// Place all the styles related to the Movies controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$lp: #f27d7d;
+$tl: #824f67;
+
+body {
+	width: 100%;
+	height: 100%;
+	background: $lp;
+	color: $tl;
+}
+.navbar.navbar-default {
+	border: 0;
+	border-radius: 0;
+}
+.navbar-default .navbar-brand {
+	color: $lp;
+	&:hover, &:focus {
+		color: $lp;
+	}
+}
+.navbar-default .navbar-nav>li>a {
+	color: $lp;
+	&:hover, &:focus {
+		color: $lp;
+	}
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+	border: 0;
+}
+.thumbnail {
+	padding: 0;
+	background: none;
+	border: 1px solid $tl;
+	a {
+		&:hover, &:focus {
+		}
+	}
+}
+.well {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: #fff;
+	border: 1px solid $lp;
+	color: $lp;
+}
+
+.well h2 {
+	color: $lp;
+}
+
+.well label {
+	color: $lp;
+}
+
+.movies-input {
+	color: #f7544f;
+	background: transparent;
+	border-radius: 0;
+	border: 0;
+	border-bottom: 1px solid $lp;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	&:focus {
+		border-color: $lp;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+}
+
+.btn-lp {
+	color: #fff;
+	background: $lp;
+	&:hover, &:focus {
+		color: #fff;
+	}
+}
+
+.btn-tl {
+	background: $tl;
+	color: #fff;
+	&:hover, &:focus {
+		color: #fff;
+	}
+}
+.checkbox-lp input[type="checkbox"]:checked+label::before,
+.checkbox-lp input[type="radio"]:checked+label::before {
+	background-color: $lp;
+	border-color: $lp;
+}
+.table>tbody>tr>td, .table>tbody>tr>th,
+.table>tfoot>tr>td, .table>tfoot>tr>th,
+.table>thead>tr>td, .table>thead>tr>th {
+	border: 0;
+}
+td {
+	color: $lp;
+}
+.panel-default {
+	border: 0;
+	background-color: $tl;
+}
+p {
+	color: $lp;
+}
