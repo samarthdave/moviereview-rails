@@ -15,6 +15,14 @@
 							<td>Director</td>
 							<td><%= @movie.director %></td>
 						</tr>
+						<tr>
+							<td>Length</td>
+							<td><%= @movie.length %></td>
+						</tr>
+						<tr>
+							<td>Movie Review created by</td>
+							<td><%= @movie.user.email %></td>
+						</tr>
 					</table>
 				</div>
 				<div class="col-sm-5 col-sm-offset-0 col-md-7">
