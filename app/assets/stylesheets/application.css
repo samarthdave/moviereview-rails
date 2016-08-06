@@ -11,12 +11,14 @@
  * file per style scope.
  *
  *= require bsm.min
- *= require fa.min
+ 
  *= require ch.min
  *= require bar.min
  *= require_tree .
  *= require_self
  */
+ 
+/* fa.min*/
 ::-webkit-input-placeholder {
 	color: #f27d7d!important;
 }
